@@ -24,7 +24,7 @@ Instead of releasing cooling devices completely to vendor control (which causes 
 
 - **Dynamic Cluster Discovery:** Automatically detects all `cpu-cluster*` cooling nodes (`cooling_device3/4/5/13/14/31/32`, etc.) across reboots.
 - **Static Trip Filtering:** Ignores static hardware trip zones (`*trip*`, `*limit*`, `*max*`) so only live SoC/CPU temperatures drive state transitions.
-- **2-Stage Smooth Thermal Clamp (`v3.5`):**
+- **2-Stage Smooth Thermal Clamp (`v1.0`):**
   - **`<= 100°C` (`LOCKED`):** Locks `cur_state=0` and holds `policy0` at **3.19 GHz** (`3187200`) & `policy6` at **3.65 GHz** (`3648000`).
   - **`101–102°C` (`SOFT1_CLAMP`):** Applies `cur_state=2` and steps down `policy0` / `policy6` slightly to slow heat buildup.
   - **`103–105°C` (`SOFT2_CLAMP`):** Applies `cur_state=4` and steps `policy0` down 3 frequency levels to stabilize temperature without hitting hardware trip.
