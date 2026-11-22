@@ -44,3 +44,13 @@ SOFT2_TEMP=103
 SOFT2_STATE=4
 FULL_RELEASE_TEMP=106
 RELOCK_TEMP=98
+Installation
+1. Download the module .zip from the Releases tab.
+2. Open Magisk or KernelSU -> Modules -> Install from storage.
+3. Select the .zip file and reboot your device.
+Live Log Monitoring
+su -c 'tail -f /data/adb/modules/cpu_cluster_lock/status.log'
+⚠️ Disclaimer & No Liability
+Use at your own risk. Overriding thermal limits increases device heat and battery stress.
+Developer accepts NO responsibility for bricked devices, hardware degradation, thermal damage, or data loss.
+Author: Clenix / Kahraman
